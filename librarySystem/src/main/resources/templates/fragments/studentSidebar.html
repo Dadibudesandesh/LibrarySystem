@@ -1,0 +1,58 @@
+<div th:fragment="studentSidebar" xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <div class="sidebar">
+
+        <ul class="nav flex-column">
+
+            <!-- Home -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/student/home}">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <!-- New Books -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/student/newBooks}">
+                    <i class="fas fa-book"></i>
+                    <span>New Books</span>
+                </a>
+            </li>
+
+            <!-- Borrowed Books -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/student/borrowedBooks}">
+                    <i class="fas fa-book-reader"></i>
+                    <span>Borrowed Books</span>
+                </a>
+            </li>
+
+            <!-- Borrow Request -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/student/borrowRequest}">
+                    <i class="fas fa-user"></i>
+                    <span>Borrow Request</span>
+                </a>
+            </li>
+
+            <!-- My Requests -->
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/student/myRequests}">
+                    <i class="fas fa-list"></i>
+                    <span>My Requests</span>
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Logout -->
+        <form th:action="@{/logout}" method="post" class="btn-logout">
+            <button type="submit" class="btn btn-outline-danger w-100">
+                Logout
+            </button>
+        </form>
+
+    </div>
+
+</div>

@@ -1,0 +1,90 @@
+/* src/main/resources/static/css/sidebar.css */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #343a40;
+    color: #ffffff;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Expand Sidebar on Hover */
+.sidebar:hover {
+    width: 250px;
+}
+
+/* Navigation Items */
+.sidebar .nav-item {
+    text-align: left;
+}
+
+/* Navigation Links */
+.sidebar .nav-link {
+    color: #ffffff !important;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+/* Icons */
+.sidebar .nav-link i {
+    font-size: 20px;
+    min-width: 30px;
+}
+
+/* Menu Text Hidden Initially */
+.sidebar .nav-link span {
+    opacity: 0;
+    margin-left: 10px;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease, margin-left 0.3s ease;
+}
+
+/* Show Text on Hover */
+.sidebar:hover .nav-link span {
+    opacity: 1;
+    margin-left: 10px;
+}
+
+/* Logout Button */
+.btn-logout {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show Logout Button on Hover */
+.sidebar:hover .btn-logout {
+    opacity: 1;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 80px;
+    padding: 30px;
+    transition: margin-left 0.3s ease;
+    width: calc(100% - 80px);
+}
+
+/* Adjust Content When Sidebar Expands */
+.sidebar:hover + .main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+}
